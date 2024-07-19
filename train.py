@@ -97,7 +97,7 @@ def get_or_build_tokenizer(config, ds, lan):
     return tokenizer
 
 def get_ds(config):
-    ds_raw = load_dataset("opus_book", f"{config['lan_src']}-{config['lan_tgt']}", split="train")
+    ds_raw = load_dataset("opus_books", f"{config['lan_src']}-{config['lan_tgt']}", split="train")
     tokenizer_src = get_or_build_tokenizer(config, ds_raw, config["lan_src"])
     tokenizer_tgt = get_or_build_tokenizer(config, ds_raw, config["lan_tgt"])
 
